@@ -1,7 +1,7 @@
 import pygame
 import math
 from PIL import Image
-from PIL import ImageDraw
+
 
 # 초기화
 
@@ -29,8 +29,6 @@ running = True
 clock = pygame.time.Clock()
 
 while running:
-    BackGround=BackGround("spacebg.png",[0,0])
-    gameDisplay.blit(bg,(0,0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -64,7 +62,7 @@ while running:
     y8 = b * math.sin(angle+9) + height // 2
     # 화면 지우기
     screen.fill(white)
-    screen.blit(BackGround.image,BackGround.rect)
+
 
     # 타원 그리기
     pygame.draw.circle(screen, (255, 51, 51), (int(x3), int(y3)), 5) #수성
